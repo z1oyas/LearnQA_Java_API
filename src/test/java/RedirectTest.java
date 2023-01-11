@@ -6,7 +6,7 @@ public class RedirectTest {
     @Test
     public void testRedirect() {
         RestAssured.baseURI ="https://playground.learnqa.ru/api";
-        String response = given()
+        String response  = given()
                 .redirects()
                 .follow(true)
                 .when()
