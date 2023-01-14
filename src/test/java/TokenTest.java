@@ -14,6 +14,7 @@ public class TokenTest {
                 .get()
                 .jsonPath();
         String token = createTask.get("token");
+        int time = (createTask.get("seconds"));
 
         JsonPath taskStatus = given()
                 .when()
@@ -22,7 +23,8 @@ public class TokenTest {
                 .jsonPath();
         String status = taskStatus.get("status");
 
-        Thread.sleep(15000);
+        int time_ms = time*1000;
+        Thread.sleep(time_ms);
         JsonPath taskResponse = given()
                 .when()
                 .queryParam("token", token)
