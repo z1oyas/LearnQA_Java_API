@@ -40,7 +40,7 @@ public class UserAgentTest {
                 ParamsSet =ExpectedParams[4];
                 break;
         }
-        assertEquals(Responceparams,ParamsSet,"params doesn't match");
+        assertEquals(ParamsSet,Responceparams,"params doesn't match");
         System.out.println(Responceparams);
         System.out.println(ParamsSet);
     }
